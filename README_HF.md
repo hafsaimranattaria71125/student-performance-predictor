@@ -30,3 +30,5 @@ curl -X POST "https://[YOUR-USERNAME]-student-performance-api.hf.space/analyze" 
 - Trained on student performance dataset
 - 19 input features (numeric + categorical)
 - Predicts exam scores 0-100
+
+Note: This file was added as README.md on Hugging Face but renamed as README_HF.md to avoid confusion with github README.md

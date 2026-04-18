@@ -14,7 +14,7 @@ pip install -r requirements.txt
 ### Run
 **Terminal 1** - Start API:
 ```bash
-python main.py
+uvicorn main:app --reload --port 8000
 ```
 
 **Terminal 2** - Start UI:

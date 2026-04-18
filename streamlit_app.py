@@ -1,13 +1,21 @@
 import streamlit as st
 import requests
+import os
 
-API_URL = "http://127.0.0.1:8000/analyze"
+# Get API URL from environment or use Hugging Face Space
+API_URL = os.getenv(
+    "API_URL", 
+    "https://hafsaimranattaria7115-student-performance-api.hf.space/analyze"
+)
 
 st.set_page_config(page_title="Student Analyzer", layout="wide")
 
 st.title("🎓 Student Performance Analyzer")
 st.write("Predict exam score and get optimization strategies.")
 
+# Show current API endpoint
+with st.expander("ℹ️ API Configuration"):
+    st.info(f"**API Endpoint:** {API_URL}")
 # ------------------ NUMERIC INPUTS ------------------
 st.subheader("📊 Academic Inputs")
 
@@ -81,7 +89,7 @@ if st.button("🚀 Analyze Performance"):
     }
 
     try:
-        response = requests.post(API_URL, json=payload)
+        response = requests.post(API_URL, json=payload, timeout=30)
 
         if response.status_code == 200:
             data = response.json()
@@ -123,5 +131,10 @@ if st.button("🚀 Analyze Performance"):
         else:
             st.error(f"❌ API Error: {response.text}")
 
+    except requests.exceptions.Timeout:
+        st.error("⏱️ Request Timeout: API took too long to respond. Please try again.")
+    except requests.exceptions.ConnectionError:
+        st.error(f"🔌 Connection Error: Cannot reach API at {API_URL}")
+        st.info("Make sure the backend API is running and the URL is correct.")
     except Exception as e:
-        st.error(f"⚠️ Connection failed: {e}")
+        st.error(f"⚠️ Error: {str(e)}")

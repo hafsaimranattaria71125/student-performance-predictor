@@ -22,16 +22,16 @@ st.subheader("📊 Academic Inputs")
 col1, col2, col3 = st.columns(3)
 
 with col1:
-    hours_studied = st.slider("Hours Studied", 0.0, 50.0, 20.0)
+    hours_studied = st.slider("Avg. no. of hours studied per week", 0.0, 50.0, 20.0)
     attendance = st.slider("Attendance (%)", 0.0, 100.0, 85.0)
 
 with col2:
-    sleep_hours = st.slider("Sleep Hours", 0.0, 14.0, 7.0)
+    sleep_hours = st.slider("Avg. sleep hours per night", 0.0, 14.0, 7.0)
     previous_scores = st.slider("Previous Scores", 40.0, 100.0, 75.0)
 
 with col3:
-    tutoring_sessions = st.slider("Tutoring Sessions", 0.0, 10.0, 2.0)
-    physical_activity = st.slider("Physical Activity", 0.0, 15.0, 3.0)
+    tutoring_sessions = st.slider("Tutoring Sessions attended per month", 0.0, 10.0, 2.0)
+    physical_activity = st.slider("Avg hrs. of Physical Activity per week", 0.0, 15.0, 3.0)
 
 # ------------------ CATEGORICAL INPUTS ------------------
 st.subheader("🧩 Lifestyle & Environment")
@@ -39,9 +39,9 @@ st.subheader("🧩 Lifestyle & Environment")
 col4, col5, col6 = st.columns(3)
 
 with col4:
-    parental_involvement = st.selectbox("Parental Involvement", ["Low", "Medium", "High"])
+    parental_involvement = st.selectbox("Parental Involvement in your Education", ["Low", "Medium", "High"])
     access_to_resources = st.selectbox("Access to Resources", ["Low", "Medium", "High"])
-    extracurricular = st.selectbox("Extracurricular", ["Yes", "No"])
+    extracurricular = st.selectbox("Extracurricular Activities", ["Yes", "No"])
 
 with col5:
     motivation_level = st.selectbox("Motivation Level", ["Low", "Medium", "High"])
@@ -51,13 +51,13 @@ with col5:
 with col6:
     teacher_quality = st.selectbox("Teacher Quality", ["Low", "Medium", "High"])
     school_type = st.selectbox("School Type", ["Public", "Private"])
-    peer_influence = st.selectbox("Peer Influence", ["Negative", "Neutral", "Positive"])
+    peer_influence = st.selectbox("Peer Influence on Academic Performance", ["Negative", "Neutral", "Positive"])
 
 col7, col8 = st.columns(2)
 
 with col7:
     learning_disabilities = st.selectbox("Learning Disabilities", ["Yes", "No"])
-    parental_education = st.selectbox("Parental Education", ["High School", "College", "Postgraduate"])
+    parental_education = st.selectbox("Parental Education (Highest Level)", ["High School", "College", "Postgraduate"])
 
 with col8:
     gender = st.selectbox("Gender", ["Male", "Female"])

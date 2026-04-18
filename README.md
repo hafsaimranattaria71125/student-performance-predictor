@@ -99,14 +99,21 @@ streamlit run streamlit_app.py
 ## 📁 Project Structure
 
 ```
-├── main.py              # FastAPI app
-├── streamlit_app.py     # Streamlit UI
-├── schemas.py           # Data models
-├── model.py             # ML & recommendations
-├── train_model.py       # Training script
-├── StudentPerformanceFactors.csv
-├── model.pkl            # Trained model
-└── requirements.txt
+student_grade_api/
+├── main.py                          # FastAPI application
+├── streamlit_app.py                 # Streamlit web UI
+├── model.py                         # ML model & recommendation logic
+├── schemas.py                       # Pydantic data models
+├── train_model.py                   # Model training script
+├── StudentPerformanceFactors.csv    # Training dataset
+├── model.pkl                        # Trained ML model
+├── scaler.pkl                       # Feature scaler
+├── model_meta.pkl                   # Model metadata
+├── test_indices.npy                 # Test set indices
+├── requirements.txt                 # Python dependencies
+├── runtime.txt                      # Python version info
+├── README.md                        # This file
+└── __pycache__/                     # Compiled Python cache
 ```
 
 ## 🎯 How It Works

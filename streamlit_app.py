@@ -138,3 +138,4 @@ if st.button("🚀 Analyze Performance"):
         st.info("Make sure the backend API is running and the URL is correct.")
     except Exception as e:
         st.error(f"⚠️ Error: {str(e)}")
+        

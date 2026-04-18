@@ -1,3 +1,12 @@
+---
+title: Student Performance API
+emoji: 📊
+colorFrom: blue
+colorTo: purple
+sdk: docker
+app_file: main.py
+pinned: false
+---
 # Student Performance API
 
 FastAPI backend for predicting student exam scores and recommendations.

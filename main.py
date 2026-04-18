@@ -38,7 +38,6 @@ def root():
         "version": "1.0.0",
         "status": "✅ Running",
         "endpoints": {
-            "predict": "/predict (POST)",
             "analyze": "/analyze (POST)",
             "docs": "/docs"
         }

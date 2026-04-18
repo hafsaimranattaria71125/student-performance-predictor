@@ -1,8 +1,8 @@
 from fastapi import  FastAPI
 from contextlib import asynccontextmanager
 from fastapi.responses import JSONResponse
-from app.model import load_artifacts,recommend
-from app.schemas import AnalyzeResponse,StudentInput
+from model import load_artifacts,recommend
+from schemas import AnalyzeResponse,StudentInput
 @asynccontextmanager
 async def lifespan(app: FastAPI):
     load_artifacts()  # runs at startup

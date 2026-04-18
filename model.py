@@ -15,12 +15,11 @@ NUMERIC_FEATURES = None
 CATEGORICAL_FEATURES = None
 ALL_FEATURES = None
 ENCODERS = None
-# Load from main folder (where train_model.py saves)
+# Paths - files are in same directory as this script
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-ROOT_DIR = os.path.dirname(BASE_DIR)
-MODEL_PATH = os.path.join(ROOT_DIR, "model.pkl")
-SCALER_PATH = os.path.join(ROOT_DIR, "scaler.pkl")
-META_PATH = os.path.join(ROOT_DIR, "model_meta.pkl")
+MODEL_PATH = os.path.join(BASE_DIR, "model.pkl")
+SCALER_PATH = os.path.join(BASE_DIR, "scaler.pkl")
+META_PATH = os.path.join(BASE_DIR, "model_meta.pkl")
 def load_artifacts():
     global _model, _scaler, _meta
     global NUMERIC_FEATURES, CATEGORICAL_FEATURES, ALL_FEATURES, ENCODERS

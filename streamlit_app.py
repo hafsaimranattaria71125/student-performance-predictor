@@ -8,7 +8,7 @@ API_URL = os.getenv(
     "https://hafsaimranattaria7115-student-performance-api.hf.space/analyze"
 )
 
-st.set_page_config(page_title="Student Analyzer", layout="wide")
+st.set_page_config(page_title="Student Performance Analyzer", layout="wide")
 
 st.title("🎓 Student Performance Analyzer")
 st.write("Predict exam score and get optimization strategies.")

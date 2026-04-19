@@ -13,9 +13,6 @@ st.set_page_config(page_title="Student Performance Analyzer", layout="wide")
 st.title("🎓 Student Performance Analyzer")
 st.write("Predict exam score and get optimization strategies.")
 
-# Show current API endpoint
-with st.expander("ℹ️ API Configuration"):
-    st.info(f"**API Endpoint:** {API_URL}")
 # ------------------ NUMERIC INPUTS ------------------
 st.subheader("📊 Academic Inputs")
 
